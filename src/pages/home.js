@@ -102,7 +102,7 @@ class Home extends React.Component {
 
     componentDidMount() {
       var mapdata = []
-      axios.get(`http://quarkus-words-api-grafzahl1.apps.cluster-datacbr-c04a.datacbr-c04a.openshiftworkshop.com/api/v1/words`)
+      axios.get(`REPLACE_ME`)
         .then(res => {
           this.setState({ treemapdata: res.data });
           var datarows = [];
