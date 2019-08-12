@@ -160,7 +160,7 @@ class PageLayoutSimpleNav extends React.Component {
               position="right"
               onSelect={this.onDropdownSelect}
               isOpen={isDropdownOpen}
-              toggle={<DropdownToggle onToggle={this.onDropdownToggle}>Kyle Baker</DropdownToggle>}
+              toggle={<DropdownToggle onToggle={this.onDropdownToggle}>Guest</DropdownToggle>}
               dropdownItems={userDropdownItems}
             />
           </ToolbarItem>
@@ -171,7 +171,7 @@ class PageLayoutSimpleNav extends React.Component {
     const Header = (
       <PageHeader
         //logo={<Brand src="http://people.redhat.com/swells/ssg_logos/OpenSCAP-Logo/OpenSCAP-Icon-Color.svg" alt="Patternfly Logo" />}
-        logo={<span>React Grafzah</span>}
+        logo={<span>React Grafzahl</span>}
         toolbar={PageToolbar}
         showNavToggle
       />
