@@ -1,40 +1,11 @@
 # react-grafzahl
 
-This is a React front-end to the radanalytics.io 'Graf Zahl' application. It provides a Patternfly nav interface and a treemap displaying the 
+This is a React front-end to the radanalytics.io [GrafZahl](https://radanalytics.io/applications/grafzahl) application. It provides a Patternfly interface and a tree-map visualising the word counts generated.
 
-
-## Known issues
-
-- Currently the version of `patternfly/react-core` is locked to 2.3.6. Attempting 
-to use later versions breaks the background image rendering.
-- `neovis.js` doesn't expose many of the underlying `vis.js` config options. As 
-a result, physics cannot be completely disabled. This is still being tracked in 
-[issue 36](https://github.com/neo4j-contrib/neovis.js/issues/36).
-
-## Gotchas
-
-Ensure you have a .babelrc created:
+## Deploying with podman and buildah
 ```
-{
-    "presets":[
-        "@babel/preset-env",
-        "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-export-default-from"
-    ]
-}
-```
-
-## Quick-start
-```bash
-npm install yarn -g # ensure you have yarn on your machine globally
-git clone https://github.com/patternfly/patternfly-react-seed # clone the project
-cd patternfly-react-seed # navigate into the project directory
-yarn # install patternfly-react-seed dependencies
-yarn build # build the project
-yarn start # start the development server
+buildah bud -f Dockerfile -t react-grafzahl:latest .
+podman run -d --net=host react-grafzahl:latest
 ```
 ## Development Scripts
 
